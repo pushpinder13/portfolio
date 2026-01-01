@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 export const SimpleBanner = () => {
@@ -7,8 +7,10 @@ export const SimpleBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const period = 2000;
   const [delta, setDelta] = useState(300);
+  
+  const toRotate = useMemo(() => ["Full Stack Developer", "AI/ML Engineer"], []);
+  
   useEffect(() => {
-    const toRotate = ["Full Stack Developer", "AI/ML Engineer"];
     const tick = () => {
       let i = loopNum % toRotate.length;
       let fullText = toRotate[i];
@@ -32,7 +34,7 @@ export const SimpleBanner = () => {
 
     let ticker = setInterval(tick, delta);
     return () => clearInterval(ticker);
-  }, [text, delta, isDeleting, loopNum, period]);
+  }, [text, delta, isDeleting, loopNum, period, toRotate]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);

@@ -1,66 +1,47 @@
-# Personal Portfolio
+# Professional Portfolio - Pushpinder Singh
 
-Welcome to My Personal Portfolio!
+Modern, responsive portfolio website showcasing full-stack development expertise and machine learning projects. Built with React.js and cutting-edge web technologies.
 
-Discover a showcase of my web development skills and projects on this cutting-edge platform. Built with HTML, CSS, JavaScript, and React.js, my portfolio offers a seamless and engaging user experience. Browse through my projects, learn about my expertise, and access my resume—all in one place.
+**Live Demo**: [https://pushpinderportfolio.netlify.app/](https://pushpinderportfolio.netlify.app/)
 
 ## Featured Projects
 
-### 🎬 ReelBite
-- **Description**: Your ultimate online destination for movie reviews, ticket bookings, and meal orders
-- **Technologies**: React.js, Node.js, MongoDB, Express.js
-- **Live Demo**: [ReelBite](https://reelbite1.netlify.app/)
+### 🚗 VEHIQL: Car Dealership Management Platform
+- **Technologies**: React.js, JavaScript, PostgreSQL, Node.js, Express.js
+- **Status**: Ongoing
+- **Live Demo**: [VEHIQL](https://vehiql-rust.vercel.app/)
+- **GitHub**: [Source Code](https://github.com/pushpinder13/vehiql)
 
-### 📝 Review Hub
-- **Description**: Platform for sharing detailed reviews on food, academics, sports, and faculty at universities
-- **Technologies**: HTML5, CSS3, JavaScript, Bootstrap
-- **Live Demo**: [Review Hub](https://surveyform13.netlify.app/)
+### 🍷 Wine Quality Prediction System
+- **Technologies**: Python, Scikit-Learn, Pandas, NumPy, Streamlit
+- **Accuracy**: 93% prediction accuracy
+- **Live Demo**: [Wine Quality Predictor](https://wine-quality-predictor.streamlit.app)
+- **GitHub**: [Source Code](https://github.com/pushpinder13/wine-quality)
 
-### 🗳️ VoteBoss Hub
-- **Description**: Voting platform for selected players with user-friendly interface and reviews
-- **Technologies**: React.js, CSS3, JavaScript, Local Storage
-- **Live Demo**: [VoteBoss Hub](https://big-boss-voting-zone.netlify.app/signup/signup#)
-
-### 🍷 Wine Quality Predictor
-- **Description**: Machine learning model that predicts wine quality based on chemical properties
-- **Technologies**: Python, Scikit-learn, Pandas, NumPy, Matplotlib
-- **Features**: Data preprocessing, Model training, Quality prediction, Visualization
-
-### 🚗 Vehicle Management System
-- **Description**: Comprehensive system for tracking and managing vehicle information
-- **Technologies**: React.js, Node.js, MySQL, Express.js
-- **Features**: Vehicle tracking, Maintenance scheduling, Performance analytics
+### 🏠 Rentifyy: Home Rental Hub
+- **Technologies**: JavaScript, Node.js, Express.js, MongoDB, HTML5, CSS3
+- **Status**: Completed
+- **GitHub**: [Source Code](https://github.com/pushpinder13/Rentifyy)
 
 ## Technologies Used
 
-- **Frontend**: React.js, HTML5, CSS3, JavaScript, Bootstrap
+- **Frontend**: React.js, JavaScript, HTML5, CSS3, Bootstrap
 - **Backend**: Node.js, Express.js
-- **Databases**: MongoDB, MySQL
+- **Databases**: PostgreSQL, MongoDB
 - **Machine Learning**: Python, Scikit-learn, Pandas, NumPy
-- **Tools**: Git, GitHub, Visual Studio Code
+- **Tools**: Git, GitHub, VS Code, Netlify
 
 ## Getting Started
 
-1. Clone the repository
 ```bash
-git clone <repository-url>
-```
-
-2. Install dependencies
-```bash
+git clone https://github.com/pushpinder13/portfolio.git
+cd portfolio
 npm install
-```
-
-3. Start the development server
-```bash
 npm start
-```
-
-4. Build for production
-```bash
-npm run build
 ```
 
 ## Contact
 
-Feel free to reach out for collaborations or opportunities!
+- **GitHub**: [pushpinder13](https://github.com/pushpinder13)
+- **LinkedIn**: [pushpinder13](https://linkedin.com/in/pushpinder13)
+- **Location**: India

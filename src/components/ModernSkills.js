@@ -4,25 +4,6 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export const ModernSkills = () => {
   useScrollAnimation();
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const skillsSection = document.getElementById('skills');
-    if (skillsSection) {
-      observer.observe(skillsSection);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const skillCategories = [
     {

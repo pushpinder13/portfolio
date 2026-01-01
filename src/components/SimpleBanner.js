@@ -5,11 +5,10 @@ export const SimpleBanner = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-  const toRotate = ["Full Stack Developer", "AI/ML Engineer"];
   const period = 2000;
   const [delta, setDelta] = useState(300);
-
   useEffect(() => {
+    const toRotate = ["Full Stack Developer", "AI/ML Engineer"];
     const tick = () => {
       let i = loopNum % toRotate.length;
       let fullText = toRotate[i];
@@ -33,7 +32,7 @@ export const SimpleBanner = () => {
 
     let ticker = setInterval(tick, delta);
     return () => clearInterval(ticker);
-  }, [text, delta, isDeleting, loopNum, toRotate, period]);
+  }, [text, delta, isDeleting, loopNum, period]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);

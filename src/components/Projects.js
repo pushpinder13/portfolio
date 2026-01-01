@@ -1,5 +1,6 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import KajaImg1 from "../assets/img/Kaja1.png";
 import KajaImg2 from "../assets/img/Kaja2.png";
 import KajaImg3 from "../assets/img/Kaja3.png";
@@ -12,7 +13,6 @@ import Gan3 from "../assets/img/GAN3.png"
 import Gan4 from "../assets/img/GAN4.png"
 import Gan5 from "../assets/img/GAN5.png"
 import Gan6 from "../assets/img/GAN6.png"
-// import fam from "../assets/img/YeTunFamcolored.jpg"
 
 import Eatthis1 from "../assets/img/Eatthis1.png"
 import Eatthis2 from "../assets/img/Eatthis2.png"
@@ -21,105 +21,128 @@ import Eatthis4 from "../assets/img/Eatthis4.png"
 import Eatthis5 from "../assets/img/Eatthis5.png"
 import Eatthis6 from "../assets/img/Eatthis6.png"
 
+// Wine Quality Project Images
+import Wine1 from "../assets/img/wine1.png"
+
+// Vehicle Project Images  
+import Vehicle1 from "../assets/img/vehicle1.png"
 
 import 'animate.css';
 
 export const Projects = () => {
+  useScrollAnimation();
 
   const EatthisProject = [
     {
       title: "ReelBite",
-      // description: "Web App",
+      description: "Home Page",
       imgUrl: Eatthis1,
     },
     {
       title: "ReelBite",
-      // description: "Web App",
+      description: "Movie Listings",
       imgUrl: Eatthis2,
     },
     {
       title: "ReelBite",
-      // description: "Web App",
+      description: "Booking Interface",
       imgUrl: Eatthis3,
     },
     {
       title: "ReelBite",
-      // description: "Web App",
+      description: "Food Ordering",
       imgUrl: Eatthis4,
     },
     {
       title: "ReelBite",
-      // description: "Web App",
+      description: "User Dashboard",
       imgUrl: Eatthis5,
     },
-
     {
       title: "ReelBite",
-      // description: "Web App",
+      description: "Reviews Section",
       imgUrl: Eatthis6,
     },
-
   ];
 
   const Kajaproject = [
     {
       title: "Review Hub",
-      // description: "Design & Development",
+      description: "Landing Page",
       imgUrl: KajaImg1,
     },
     {
       title: "Review Hub",
-      // description: "Design & Development",
+      description: "Review Form",
       imgUrl: KajaImg2,
     },
     {
       title: "Review Hub",
-      // description: "Design & Development",
+      description: "Categories",
       imgUrl: KajaImg3,
     },
     {
       title: "Review Hub",
-      // description: "Design & Development",
+      description: "User Interface",
       imgUrl: KajaImg4,
     },
     {
       title: "Review Hub",
-      // description: "Design & Development",
+      description: "Results Display",
       imgUrl: KajaImg5,
     },
-
   ];
 
   const GANprojects = [
     {
       title: "VoteBoss Hub",
-      // description: "Training Result 0 of 100",
+      description: "Home Page",
       imgUrl: Gan1,
     },
     {
       title: "VoteBoss Hub",
-      // description: "Training Result 20 of 100",
+      description: "Voting Interface",
       imgUrl: Gan2,
     },
     {
       title: "VoteBoss Hub",
-      // description: "Training Result 40 0f 100",
+      description: "Player Profiles",
       imgUrl: Gan3,
     },
     {    
       title: "VoteBoss Hub",
-      // description: "Training Result 60 of 100",
+      description: "Results Dashboard",
       imgUrl: Gan4,
     },
     {
       title: "VoteBoss Hub",
-      // description: "Training Result 80 of 100",
+      description: "User Reviews",
       imgUrl: Gan5,
     },
     {
       title: "VoteBoss Hub",
-      // description: "Training Result 100 of 100",
+      description: "Admin Panel",
       imgUrl: Gan6,
+    },
+  ];
+
+  const wineQualityProject = [
+    {
+      title: "Wine Quality Predictor",
+      description: "ML Model for Wine Quality Assessment",
+      imgUrl: Wine1,
+      technologies: ["Python", "Scikit-learn", "Pandas", "NumPy"],
+      githubLink: "https://github.com/pushpinder13/wine-quality"
+    },
+  ];
+
+  const vehicleProject = [
+    {
+      title: "Vehicle Management System",
+      description: "Comprehensive Vehicle Tracking",
+      imgUrl: Vehicle1,
+      technologies: ["React.js", "Node.js", "MySQL", "Express.js"],
+      githubLink: "https://github.com/pushpinder13/vehicle-management"
     },
   ];
 
@@ -132,12 +155,14 @@ export const Projects = () => {
   // ];
 
   return (
-    <section className="project" id="projects">
+    <section className="project fade-in-up" id="projects">
       <Container>
         <Row>
           <Col size={12}>
-            <h2>Projects</h2>
-            <p>Here are the demos of some of the projects that I worked on. For more information visit my github provided on top fo the page</p>
+            <div className="fade-in-up">
+              <h2>Projects</h2>
+              <p>Here are the demos of some of the projects that I worked on. Each project showcases different technologies and skills. For more information and source code, visit my GitHub profile.</p>
+            </div>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
@@ -150,12 +175,17 @@ export const Projects = () => {
                   <Nav.Link eventKey="third">VoteBoss Hub</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="fourth">Coming Soon...</Nav.Link>
+                  <Nav.Link eventKey="fourth">Wine Quality</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="fifth">Vehicle System</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content id="slideInUp">
               <Tab.Pane eventKey="first">
-                <p>ReelBite - Your ultimate online destination for movie reviews, ticket bookings, and meal orders. (Where movies meet meals). Link - <a href="https://reelbite1.netlify.app/">ReelBite</a></p>
+                <p><strong>ReelBite</strong> - Your ultimate online destination for movie reviews, ticket bookings, and meal orders. (Where movies meet meals)<br/>
+                <strong>Technologies:</strong> React.js, Node.js, MongoDB, Express.js<br/>
+                <strong>Live Demo:</strong> <a href="https://reelbite1.netlify.app/" target="_blank" rel="noopener noreferrer">ReelBite</a></p>
                   <Row>
                     {
                       EatthisProject.map((project, index) => {
@@ -170,7 +200,9 @@ export const Projects = () => {
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
-                <p>Review Hub - Discover and share detailed reviews on food, academics, sports, and faculty at universities with our user-friendly platform. Link - <a href="https://surveyform13.netlify.app/">Review Hub</a></p>
+                <p><strong>Review Hub</strong> - Discover and share detailed reviews on food, academics, sports, and faculty at universities with our user-friendly platform.<br/>
+                <strong>Technologies:</strong> HTML5, CSS3, JavaScript, Bootstrap<br/>
+                <strong>Live Demo:</strong> <a href="https://surveyform13.netlify.app/" target="_blank" rel="noopener noreferrer">Review Hub</a></p>
                   <Row>
                     {
                       Kajaproject.map((project, index) => {
@@ -185,7 +217,9 @@ export const Projects = () => {
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
-                <p>VoteBoss Hub - Cast your votes on selected players effortlessly and access reliable reviews with our seamless, user-friendly platform.Link - <a href="https://big-boss-voting-zone.netlify.app/signup/signup#">VoteBoss Hub</a></p>
+                <p><strong>VoteBoss Hub</strong> - Cast your votes on selected players effortlessly and access reliable reviews with our seamless, user-friendly platform.<br/>
+                <strong>Technologies:</strong> React.js, CSS3, JavaScript, Local Storage<br/>
+                <strong>Live Demo:</strong> <a href="https://big-boss-voting-zone.netlify.app/" target="_blank" rel="noopener noreferrer">VoteBoss Hub</a></p>
                   <Row>
                     {
                       GANprojects.map((project, index) => {
@@ -199,11 +233,13 @@ export const Projects = () => {
                     }
                   </Row>  
                 </Tab.Pane>
-                {/* <Tab.Pane eventKey="fourth">
-                  <p>More Project to come but for now just enjoy some cute art :P</p>
+                <Tab.Pane eventKey="fourth">
+                  <p><strong>Wine Quality Predictor</strong> - Machine learning model that predicts wine quality based on chemical properties using various ML algorithms.<br/>
+                  <strong>Technologies:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib<br/>
+                  <strong>Features:</strong> Data preprocessing, Model training, Quality prediction, Visualization</p>
                   <Row>
                     {
-                      more.map((project, index) => {
+                      wineQualityProject.map((project, index) => {
                         return (
                           <ProjectCard
                             key={index}
@@ -213,7 +249,24 @@ export const Projects = () => {
                       })
                     }
                   </Row>
-                </Tab.Pane> */}
+                </Tab.Pane>
+                <Tab.Pane eventKey="fifth">
+                  <p><strong>Vehicle Management System</strong> - Comprehensive system for tracking and managing vehicle information, maintenance, and performance metrics.<br/>
+                  <strong>Technologies:</strong> React.js, Node.js, MySQL, Express.js<br/>
+                  <strong>Features:</strong> Vehicle tracking, Maintenance scheduling, Performance analytics, User management</p>
+                  <Row>
+                    {
+                      vehicleProject.map((project, index) => {
+                        return (
+                          <ProjectCard
+                            key={index}
+                            {...project}
+                            />
+                        )
+                      })
+                    }
+                  </Row>
+                </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
           </Col>

@@ -33,11 +33,23 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Programming language: JavaScript,HTML,CSS,Java,Python,C++,C.<br></br> Environment: React, Visual Studio, Andriod Studio, GitHub, Linux Terminal</p>
+                        <p>Full-stack developer with expertise in modern web technologies, machine learning, and database management.<br />
+                        <strong>Languages:</strong> JavaScript, HTML, CSS, Java, Python, C++, C<br />
+                        <strong>Frameworks & Tools:</strong> React.js, Node.js, Express.js, Bootstrap, Git, GitHub<br />
+                        <strong>Databases:</strong> MongoDB, MySQL, SQLite<br />
+                        <strong>ML/Data Science:</strong> Scikit-learn, Pandas, NumPy, Matplotlib</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="meter1" />
-                                <h5>JavaScript/Html/CSS</h5>
+                                <h5>JavaScript/HTML/CSS</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="meter1" />
+                                <h5>React.js</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter3} alt="meter3" />
+                                <h5>Python</h5>
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="meter3" />
@@ -45,29 +57,16 @@ export const Skills = () => {
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="meter3" />
-                                <h5>C++</h5>
+                                <h5>Node.js</h5>
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="meter3" />
-                                <h5>React</h5>
+                                <h5>MongoDB</h5>
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="meter3" />
-                                <h5>C</h5>
+                                <h5>Machine Learning</h5>
                             </div>
-                            {/* <div className="item">
-                                <img src={meter2} alt="meter2" />
-                                <h5>NoSQL</h5>
-                            </div> */}
-                            <div className="item">
-                                <img src={meter3} alt="meter3" />
-                                <h5>Python</h5>
-                            </div>
-                            {/* <div className="item">
-                                <img src={meter2} alt="meter2" />
-                                <h5>Python</h5>
-                            </div> */}
-    
                         </Carousel>
                     </div>
                 </div>
